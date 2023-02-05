@@ -1,35 +1,42 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import Nav from '../components/Nav.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Nav from "../components/Nav.astro";
 ---
 
 <Layout title="Blog">
   <Nav />
-	<main>
-		<h1><span class="text-gradient"> Blog</span></h1>
-		
-	</main>
+  <main>
+    <h1><span class="text-gradient">Blog</span></h1>
+
+    <ul>
+      <li><a href="/posts/post-1">Post One</a></li>
+      <li><a href="/posts/post-2">Post Two</a></li>
+      <li><a href="/posts/post-3">Post Three</a></li>
+    </ul>
+  </main>
 </Layout>
 
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	
-</style>
+<style lang="scss">
+  main {
+    margin: auto;
+    padding: 1.5rem;
+    max-width: 60ch;
+  }
+  h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0;
+  }
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
 
+    &:hover {
+      opacity: 0.4;
+    }
+  }
+</style>
